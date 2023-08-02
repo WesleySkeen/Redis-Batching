@@ -14,7 +14,7 @@ Parallel took 7ms
 Serial took 829ms
 ```
 
-So looking at the above results. Parallel look ups seem to be then faster operation. Atleast in this simple scenario. I will try both in a production envirorment with real data and see what results I get. That said, batching could generally be better for optimising connection usage to the redis instance.
+So looking at the above results. Parallel look up seems to be the faster operation. Atleast in this simple scenario. I will try both in a production envirorment with real data and see what results I get. That said, batching could generally be better for optimising connection usage to the redis instance.
 
 I got curious and decided to try look up many more keys
 
@@ -26,4 +26,4 @@ Serial took 829200ms
 Calling batch
 ```
 
-So depending on the server specs and the use case, both batch and parallel could be options
+This time batching came out on top. So depending on the server specs and the use case, both batch and parallel could be options
